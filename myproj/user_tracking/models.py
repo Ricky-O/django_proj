@@ -11,5 +11,4 @@ class Access(models.Model):
     user_text = models.CharField(max_length=200)
     hits = models.IntegerField(default=0)
 
-
-
+    
