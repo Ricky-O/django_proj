@@ -1,4 +1,5 @@
 import datetime
+from models import User, Access
 
 from django.http import HttpResponse
 # Create your views here.
@@ -22,13 +23,16 @@ def time(request, user_id):
 
 
 def root(request):
-
-    return HttpResponse("End of page, need to display date, time, URL user has been forwarded to")
+    #could make this output much better and more appealing
+    for obj in User.objects.all():
+        return HttpResponse("Last visited: %s" % User.print_all(User.objects.all()))
 
 
 def redirect(request):
-
-    return HttpResponse("Great!")
+    user1 = User.objects.get(pk=1)
+    u = User.print_all(user1)
+    #could make this output much better and more appealing
+    return HttpResponse("Last visited: %s" % u)
 
 
 

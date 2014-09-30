@@ -84,3 +84,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
+
+#SETTINGS_PATH = os.path.normpath((os.path.dirname(file)))
+
+#TEMPLATE_DIRS = (os.path.join(SETTINGS_PATH, 'templates'))
